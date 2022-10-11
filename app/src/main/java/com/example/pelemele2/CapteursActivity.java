@@ -17,10 +17,9 @@ public class CapteursActivity extends AppCompatActivity implements SensorEventLi
     private SensorManager sensorManagerACC;
     private Sensor sensorACC;
 
-    private SensorManager sensorManagerMA;
-    private Sensor sensorMA;
-
-    private float[] oriantation;
+   // private SensorManager sensorManagerMA;
+  //  private Sensor sensorMA;
+  //  private float[] oriantation;
 
     private float[] linear_acceleration;
     private Switch aSwitch;
@@ -62,6 +61,7 @@ public class CapteursActivity extends AppCompatActivity implements SensorEventLi
 
     public void switch2(View view){
         act = !act;
+
         if(act){
             Toast.makeText(CapteursActivity.this,"desactiver",Toast.LENGTH_SHORT).show();
             sensorManagerACC.unregisterListener( this);
