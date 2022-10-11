@@ -1,8 +1,10 @@
 package com.example.pelemele2;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.*;
+import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
 import android.view.*;
 import android.widget.ImageView;
@@ -11,14 +13,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.core.internal.view.SupportMenu;
 
+import static java.lang.Math.abs;
+
 public class SelectActivity extends AppCompatActivity {
     private Rect rectangle;
+    private int compte;
     private ImageView selectImage;
     private SurfaceView surfaceView;
     private int x1;
     private int x2;
     private int y1;
     private int y2;
+    private   Bitmap bip;
+    private   Bitmap bitmapfini;
+
+    private BitmapDrawable imagedraw;
 
 
     @SuppressLint("ClickableViewAccessibility")
@@ -55,16 +64,47 @@ public class SelectActivity extends AppCompatActivity {
                 paint.setAntiAlias(true);
                 paint.setStyle(Paint.Style.STROKE);
                 paint.setStrokeWidth(8.0f);
+
                 new Canvas(bitmap);
                 Canvas canvas = sfhTrackHolder.lockCanvas();
                 canvas.drawColor(0, PorterDuff.Mode.CLEAR);
                 canvas.drawRect(SelectActivity.this.rectangle, paint);
                 sfhTrackHolder.unlockCanvasAndPost(canvas);
+
+
+                if(rectangle != null){
+                    imagedraw = (BitmapDrawable) selectImage.getDrawable();
+                    bip = Bitmap.createScaledBitmap(imagedraw.getBitmap(), selectImage.getWidth(),selectImage.getHeight(),false);
+
+
+                    if(bip != null  ){
+                        bitmapfini = Bitmap.createBitmap(bip,rectangle.left,rectangle.bottom,abs(rectangle.width()),abs(rectangle.height()),null,true);
+                    }
+
+                    if(bitmapfini != null){
+                        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                        View view2 = LayoutInflater.from(this).inflate(R.layout.activity_d, (ViewGroup) null);
+                        ImageView iv = (ImageView) view2.findViewById(R.id.imaged);
+                        iv.setImageBitmap(bitmapfini);
+                        builder.setView(view2);
+                        builder.show();
+                    }
+
+                }
+
             }
+
+
+
+
+
             return true;
         });
 
+
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

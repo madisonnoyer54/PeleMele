@@ -11,6 +11,7 @@
             android:layout_height="wrap_content" app:srcCompat="@drawable/image" android:id="@+id/imageselect"
             tools:ignore="MissingConstraints"/>
     <SurfaceView
+
             android:layout_width="414dp"
             android:layout_height="731dp" android:id="@+id/surfaceView" tools:layout_editor_absoluteY="0dp"
             tools:layout_editor_absoluteX="-3dp" tools:ignore="MissingConstraints"/>

@@ -19,6 +19,7 @@ public class CapteursActivity extends AppCompatActivity implements SensorEventLi
 
     private SensorManager sensorManagerMA;
     private Sensor sensorMA;
+
     private float[] oriantation;
 
     private float[] linear_acceleration;
