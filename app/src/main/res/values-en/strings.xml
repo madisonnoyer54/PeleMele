@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PeleMele2</string>
+    <string name="bonjour">hello</string>
+    <string name="chrono">stopwatch</string>
+    <string name="photo">photo</string>
+    <string name="d_prise">the last photo</string>
+    <string name="tache">long task</string>
+    <string name="meteo">weather</string>
+    <string name="contacts">contacts</string>
+    <string name="capteurs">sensor</string>
+    <string name="select">select</string>
+    <string name="quitter">leave</string>
+    <string name="l_chrono">start the stopwatch</string>
+</resources>

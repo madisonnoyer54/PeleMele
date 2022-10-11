@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PeleMele2</string>
+    <string name="bonjour">bonjour</string>
+    <string name="chrono">chronomètre</string>
+    <string name="photo">photo</string>
+    <string name="d_prise">dernière photo prise</string>
+    <string name="tache">tache</string>
+    <string name="meteo">météo</string>
+    <string name="contacts">contacts</string>
+    <string name="capteurs">capteurs</string>
+    <string name="select">séléct</string>
+    <string name="quitter">quitter</string>
+    <string name="l_chrono">lancer le chronomètre</string>
+
+</resources>
